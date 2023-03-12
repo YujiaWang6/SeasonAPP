@@ -1,0 +1,26 @@
+﻿
+@model SeasonAPP.Models.Season
+
+@{
+    ViewBag.Title = "Show Season";
+
+    string url = "/Content/images/" + @Model.SeasonName + ".jpg";
+}
+
+<h2>Season</h2>
+
+
+
+<p>The season is @Model.SeasonName !</p>
+
+
+<figure>
+    <figcaption class="place">
+        <a href="@Model.url">Place: @Model.place</a>
+    </figcaption>
+    <figcaption class="temp">
+        @Model.temp &#8451;
+    </figcaption>
+    <img src="@url" alt="@Model.SeasonName">
+
+</figure>
